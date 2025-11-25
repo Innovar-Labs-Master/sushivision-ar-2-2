@@ -29,7 +29,7 @@ rm -rf ~/Library/Application\ Support/Cursor/CachedProfilesData
 ### Oplossing 3: Handmatige Installatie via Script
 ```bash
 cd /Users/innovarslabo/Desktop/sushivision-ar-2-2
-./install-python-extension.sh
+./scripts/cursor/install-python-extension.sh
 ```
 
 ### Oplossing 4: Handmatige Installatie via VSIX
@@ -94,8 +94,8 @@ Of voeg handmatig toe aan `settings.json`:
 
 ## Hulp Scripts
 
-- **Diagnose**: `./fix-python-extension.sh` - Check systeem en geef advies
-- **Installatie**: `./install-python-extension.sh` - Probeer handmatige installatie
+- **Diagnose**: `./scripts/cursor/fix-python-extension.sh` - Check systeem en geef advies
+- **Installatie**: `./scripts/cursor/install-python-extension.sh` - Probeer handmatige installatie
 
 ## Nog Steeds Problemen?
 

@@ -73,6 +73,14 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ existingItems, restaurantInfo, 
     const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
+            // Validate file
+            const validation = validateImageFile(file);
+            if (!validation.isValid) {
+                validation.errors.forEach(error => toast.error(error));
+                e.target.value = ''; // Reset input
+                return;
+            }
+
             // In a real app, upload to Supabase Storage here
             // For now, we'll keep using base64 for preview, but ideally:
             // const { data, error } = await supabase.storage.from('images').upload(`menu/${Date.now()}_${file.name}`, file);
@@ -85,6 +93,10 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ existingItems, restaurantInfo, 
                     image: reader.result as string,
                     imageFile: file
                 }));
+                toast.success('Foto geladen');
+            };
+            reader.onerror = () => {
+                toast.error('Fout bij laden van foto');
             };
             reader.readAsDataURL(file);
         }

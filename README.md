@@ -161,7 +161,7 @@ http://localhost:5173/#admin
 
 ### Volledige Klant Handleiding
 
-📖 Zie [CUSTOMER_GUIDE.md](./CUSTOMER_GUIDE.md) voor complete instructies
+📖 Zie [Customer Guide](./docs/guides/customer.md) voor complete instructies
 
 ---
 
@@ -181,14 +181,14 @@ http://localhost:5173/#admin
 ### API Configuraties
 
 #### SiliconFlow API (DeepSeek)
-De SiliconFlow API configuratie is opgeslagen in `api-config.json`:
+De SiliconFlow API configuratie is opgeslagen in `config/api.json`:
 
 - **Base URL**: `https://api.siliconflow.com/v1`
 - **API Endpoint**: `nex-agi/DeepSeek-V3.1-Nex-N1`
 - **Model ID**: `nex-agi/DeepSeek-V3.1-Nex-N1`
 - **Compatible APIs**: `OpenAI`
 
-Voor gebruik met OpenAI-compatible clients, gebruik de base URL en model ID zoals gedefinieerd in `api-config.json`.
+Voor gebruik met OpenAI-compatible clients, gebruik de base URL en model ID zoals gedefinieerd in `config/api.json`.
 
 ### Features Overzicht
 
@@ -454,8 +454,11 @@ Built with ❤️ using Google AI Studio
 
 ### Handleidingen
 
-- 📖 [Admin Guide](./ADMIN_GUIDE.md) - Voor restaurant eigenaren
-- 📖 [Customer Guide](./CUSTOMER_GUIDE.md) - Voor klanten
+- 📖 [Admin Guide](./docs/guides/admin.md) - Voor restaurant eigenaren (indien beschikbaar)
+- 📖 [Customer Guide](./docs/guides/customer.md) - Voor klanten
+- 📖 [Quick Start](./QUICK_START.md) - Snelle start gids
+- 📖 [Deployment Guide](./docs/deployment/index.md) - Deployment instructies
+- 📖 [Security Guide](./docs/security.md) - Beveiligingsrichtlijnen
 
 ### Tech Stack Docs
 

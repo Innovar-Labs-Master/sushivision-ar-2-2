@@ -125,9 +125,10 @@ Ga naar: `http://localhost:5173/admin`
 
 **Support**: Zie volledige handleidingen in projectmap
 
-- 📖 `ADMIN_GUIDE.md` - Uitgebreide admin handleiding
-- 📖 `CUSTOMER_GUIDE.md` - Klant instructies
-- 📖 `README.md` - Technische documentatie
+- 📖 [Admin Guide](./docs/guides/admin.md) - Uitgebreide admin handleiding (indien beschikbaar)
+- 📖 [Customer Guide](./docs/guides/customer.md) - Klant instructies
+- 📖 [README.md](./README.md) - Technische documentatie
+- 📖 [Deployment Guide](./docs/deployment/index.md) - Deployment instructies
 
 ---
 

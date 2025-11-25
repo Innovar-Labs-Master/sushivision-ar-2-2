@@ -12,7 +12,7 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
@@ -44,7 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  handleReset = () => {
+  handleReset = (): void => {
     this.setState({
       hasError: false,
       error: null,
@@ -52,11 +52,11 @@ class ErrorBoundary extends Component<Props, State> {
     });
   };
 
-  handleGoHome = () => {
+  handleGoHome = (): void => {
     window.location.href = '/';
   };
 
-  render() {
+  render(): ReactNode {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -125,4 +125,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-

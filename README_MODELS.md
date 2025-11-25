@@ -14,7 +14,8 @@ Intelligent model selectie systeem voor LM Studio dat automatisch de beste model
 ### Scripts
 
 - **`find-free-models.ts`** - TypeScript script om gratis modellen te vinden
-- **`find-free-models.sh`** - Shell script voor snelle model zoekopdracht
+- **`scripts/lm-studio/find-models-lm-studio.sh`** - Shell script voor snelle model zoekopdracht
+- **`find-free-models.sh`** - Shell script voor gratis modellen (in root)
 - **`example-usage.ts`** - Voorbeelden van hoe je het systeem gebruikt
 
 ### Documentatie
@@ -209,7 +210,8 @@ curl http://localhost:1234/v1/models
 ## 📚 Meer Informatie
 
 - [Model Selection Guide](./MODEL_SELECTION_GUIDE.md) - Uitgebreide gids
-- [LM Studio Setup](./lm-studio-setup.md) - LM Studio installatie
+- [LM Studio Setup](./docs/setup/lm-studio/setup.md) - LM Studio installatie
+- [LM Studio Zoek Gids](./docs/setup/lm-studio/zoek-gids.md) - Model zoekgids
 - [Model Config](./model-config.json) - Configuratie bestand
 
 ## 🎉 Klaar!

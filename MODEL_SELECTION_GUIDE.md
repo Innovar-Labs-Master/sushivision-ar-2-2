@@ -26,6 +26,10 @@ npm install
 chmod +x find-free-models.sh
 ./find-free-models.sh
 
+# Of gebruik de LM Studio scripts:
+chmod +x scripts/lm-studio/*.sh
+./scripts/lm-studio/find-models-lm-studio.sh
+
 # Of gebruik TypeScript versie voor meer details
 npx ts-node find-free-models.ts
 ```
@@ -233,7 +237,8 @@ Als de API fouten geeft:
 
 ## 📚 Meer Informatie
 
-- [LM Studio Setup Guide](./lm-studio-setup.md)
+- [LM Studio Setup Guide](./docs/setup/lm-studio/setup.md)
+- [LM Studio Zoek Gids](./docs/setup/lm-studio/zoek-gids.md)
 - [Model Configuratie](./model-config.json)
 - [Hugging Face Model Finder](./huggingface-model-finder.ts)
 
