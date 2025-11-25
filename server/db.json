@@ -1,0 +1,9 @@
+{
+  "orders": [],
+  "users": [],
+  "settings": {
+    "apiKey": "",
+    "predictiveInventory": false,
+    "kitchenOptimization": false
+  }
+}

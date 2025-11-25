@@ -1,0 +1,9 @@
+{
+  "siliconflow": {
+    "baseUrl": "https://api.siliconflow.com/v1",
+    "apiEndpoint": "nex-agi/DeepSeek-V3.1-Nex-N1",
+    "modelId": "nex-agi/DeepSeek-V3.1-Nex-N1",
+    "compatibleApis": "OpenAI"
+  }
+}
+

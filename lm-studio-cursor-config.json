@@ -1,0 +1,32 @@
+{
+  "lm_studio": {
+    "base_url": "http://localhost:1234/v1",
+    "models": {
+      "programming": {
+        "primary": "qwen2.5-coder-32b",
+        "name": "Qwen2.5-Coder-32B-Instruct",
+        "file": "Qwen2.5-Coder-32B-Instruct-Q4_K_M.gguf"
+      },
+      "debug": {
+        "primary": "phi-3.5-mini",
+        "name": "Phi-3.5-mini-instruct",
+        "file": "Phi-3.5-mini-instruct-Q8_0.gguf"
+      }
+    }
+  },
+  "cursor_settings": {
+    "openai_api_base_url": "http://localhost:1234/v1",
+    "models": [
+      {
+        "id": "qwen2.5-coder-32b",
+        "name": "Qwen2.5-Coder-32B-Instruct",
+        "type": "programming"
+      },
+      {
+        "id": "phi-3.5-mini",
+        "name": "Phi-3.5-mini-instruct",
+        "type": "debug"
+      }
+    ]
+  }
+}

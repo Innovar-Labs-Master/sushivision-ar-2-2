@@ -1,0 +1,7 @@
+{
+  "name": "SushiVision AR 2",
+  "description": "An interactive restaurant application allowing customers to build custom sushi rolls and visualize them using AI, simulating an Augmented Reality menu experience.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "huggingface": {
+    "api_token": "${HF_API_TOKEN}",
+    "api_base": "https://huggingface.co/api",
+    "_comment": "Vervang ${HF_API_TOKEN} met je eigen token of gebruik .env bestand"
+  },
+  "lm_studio": {
+    "base_url": "http://localhost:1234/v1",
+    "timeout": 30000
+  },
+  "configured_models": {
+    "programming": {
+      "primary": {
+        "id": "qwen2.5-coder-32b",
+        "name": "Qwen2.5-Coder-32B-Instruct",
+        "file": "Qwen2.5-Coder-32B-Instruct-Q4_K_M.gguf",
+        "hf_repo": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "size_gb": 18,
+        "priority": 1,
+        "use_case": "Primaire code generatie, complexe features"
+      },
+      "alternatives": [
+        {
+          "id": "deepseek-coder-6.7b",
+          "name": "DeepSeek-Coder-6.7B-Instruct",
+          "file": "Q5_K_M.gguf",
+          "hf_repo": "deepseek-ai/DeepSeek-Coder-6.7B-Instruct",
+          "size_gb": 4.5,
+          "priority": 2
+        },
+        {
+          "id": "codellama-13b",
+          "name": "CodeLlama-13B-Instruct",
+          "file": "Q5_K_M.gguf",
+          "hf_repo": "codellama/CodeLlama-13B-Instruct",
+          "size_gb": 7.5,
+          "priority": 3
+        }
+      ]
+    },
+    "debug": {
+      "primary": {
+        "id": "phi-3.5-mini",
+        "name": "Phi-3.5-mini-instruct",
+        "file": "Phi-3.5-mini-instruct-Q8_0.gguf",
+        "hf_repo": "microsoft/Phi-3.5-mini-instruct",
+        "size_gb": 4,
+        "priority": 1,
+        "use_case": "Snelle debugging, code uitleg"
+      },
+      "alternatives": [
+        {
+          "id": "mistral-7b",
+          "name": "Mistral-7B-Instruct-v0.2",
+          "file": "Q5_K_M.gguf",
+          "hf_repo": "mistralai/Mistral-7B-Instruct-v0.2",
+          "size_gb": 4.5,
+          "priority": 2
+        },
+        {
+          "id": "phi-3-mini",
+          "name": "Phi-3-mini-instruct",
+          "file": "Q8_0.gguf",
+          "hf_repo": "microsoft/Phi-3-mini-instruct",
+          "size_gb": 2.5,
+          "priority": 3
+        }
+      ]
+    }
+  },
+  "selection_strategy": {
+    "programming": {
+      "criteria": [
+        "Code generatie kwaliteit",
+        "Context window grootte",
+        "Snelheid",
+        "RAM gebruik"
+      ],
+      "preferred_quantization": ["Q4_K_M", "Q5_K_M", "Q8_0"]
+    },
+    "debug": {
+      "criteria": [
+        "Redeneer capaciteit",
+        "Snelheid",
+        "Klein formaat",
+        "Goede instructie volging"
+      ],
+      "preferred_quantization": ["Q8_0", "Q5_K_M", "Q4_K_M"]
+    }
+  }
+}
+
