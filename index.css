@@ -1,7 +1,16 @@
 /* SushiVision AR - Global Styles */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-serif: 'Playfair Display', serif;
+  
+  --color-sushi-dark: #1a1a1a;
+  --color-sushi-red: #ff6b6b;
+  --color-sushi-rice: #fdfdfd;
+  --color-sushi-seaweed: #2c3e50;
+  --color-sushi-gold: #fbbf24;
+}
 
 * {
   margin: 0;
